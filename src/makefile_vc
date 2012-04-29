@@ -1,0 +1,15 @@
+#path to the Far Manager SVN trunk
+!ifndef FARDEV
+FARDEV = ..\..\..\FAR\fardev
+!endif
+COMMON = $(FARDEV)\plugins\common
+
+NAME = localcmdhistory
+LINK_OBJS = $(OBJDIR)\localcmdhistory.obj
+#DOCS = 
+
+!include $(FARDEV)\plugins\makefile_vc_def_inc
+
+!include $(FARDEV)\plugins\makefile_vc_target_inc
+
+$(OBJDIR)\localcmdhistory.obj: localcmdhistory.cpp version.hpp $(COMINC)\plugin.hpp
